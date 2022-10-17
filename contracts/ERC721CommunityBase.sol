@@ -537,10 +537,10 @@ contract ERC721CommunityBase is
 
     // ---- Withdraw -----
 
-    modifier onlyBuildship() {
+    modifier onlyDeveloper() {
         require(
             payable(msg.sender) == DEVELOPER_ADDRESS(),
-            "Caller is not Buildship"
+            "Caller is not developer"
         );
         _;
     }
@@ -560,7 +560,7 @@ contract ERC721CommunityBase is
         _withdraw();
     }
 
-    function forceWithdrawBuildship() public virtual onlyBuildship {
+    function forceWithdrawDeveloper() public virtual onlyDeveloper {
         _withdraw();
     }
 
