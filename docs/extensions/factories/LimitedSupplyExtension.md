@@ -1,4 +1,4 @@
-# LimitedSupplyMintingExtension
+# LimitedSupplyExtension
 
 
 
@@ -43,6 +43,27 @@ function extensionSupply() external view returns (uint256)
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | undefined |
+
+### initialize
+
+```solidity
+function initialize(string _title, address _nft, uint256 _price, uint256 _maxPerMint, uint256 _maxPerWallet, uint256 _extensionSupply) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _title | string | undefined |
+| _nft | address | undefined |
+| _price | uint256 | undefined |
+| _maxPerMint | uint256 | undefined |
+| _maxPerWallet | uint256 | undefined |
+| _extensionSupply | uint256 | undefined |
 
 ### maxPerMint
 
@@ -251,6 +272,23 @@ function supportsInterface(bytes4 interfaceId) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
+### title
+
+```solidity
+function title() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
 ### totalMinted
 
 ```solidity
@@ -320,6 +358,22 @@ function updateStartTimestamp(uint256 _startTimestamp) external nonpayable
 
 
 ## Events
+
+### Initialized
+
+```solidity
+event Initialized(uint8 version)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| version  | uint8 | undefined |
 
 ### OwnershipTransferred
 
